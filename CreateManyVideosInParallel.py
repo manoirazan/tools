@@ -59,7 +59,7 @@ def generate_random_video(i):
 
 # Generate multiple videos in parallel
 video_count = 1  # Change this to the number of videos you want to create
-video_duration = 1.1  # This is video duration in seconds, ensure it is at least 1.1 (C&E has issues uploading 1second or less)
+video_duration = 1.1  # This is video duration in seconds
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
     futures = [executor.submit(generate_random_video, i) for i in range(video_count)]
